@@ -1,5 +1,9 @@
 package com.example.viewpager_imageloading.data.model.model;
 
+import androidx.room.Entity;
+
+@Entity(tableName = "breed_table")
+
 public class Breed {
     private Weight weight;
     private String id;

@@ -58,5 +58,10 @@ public class BreedsViewModel  extends ViewModel {
                         error-> Log.e(TAG, "getBreeds: " + error.getMessage() ));
     }
 
-
+    public void insertBreed(Breed breed){
+        repository.insertBreeds(breed);
+    }
+    public LiveData<List<Breed>> getBreedsLivedata(){
+        return repository.getBreedsList();
+    }
 }
