@@ -15,7 +15,7 @@
         android:name=".BaseApplication"
         android:theme="@style/Theme.ViewPager_ImageLoading">
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

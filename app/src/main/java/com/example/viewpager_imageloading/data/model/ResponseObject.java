@@ -2,20 +2,21 @@ package com.example.viewpager_imageloading.data.model;
 
 import com.example.viewpager_imageloading.data.model.model.Breed;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ResponseObject {
-    private List<Breed> breeds = null;
+    private ArrayList<Breed> breeds = null;
     private String id;
     private String url;
-    private Integer width;
-    private Integer height;
+    private int width;
+    private int height;
 
-    public List<Breed> getBreeds() {
+    public ArrayList<Breed> getBreeds() {
         return breeds;
     }
 
-    public void setBreeds(List<Breed> breeds) {
+    public void setBreeds(ArrayList<Breed> breeds) {
         this.breeds = breeds;
     }
 
@@ -51,4 +52,14 @@ public class ResponseObject {
         this.height = height;
     }
 
+    @Override
+    public String toString() {
+        return "ResponseObject{" +
+                "breeds=" + breeds +
+                ", id='" + id + '\'' +
+                ", url='" + url + '\'' +
+                ", width=" + width +
+                ", height=" + height +
+                '}';
+    }
 }

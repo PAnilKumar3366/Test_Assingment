@@ -1,11 +1,12 @@
 package com.example.viewpager_imageloading.data.model.model;
 
 import androidx.room.Entity;
+import androidx.room.PrimaryKey;
 
 @Entity(tableName = "breed_table")
 
 public class Breed {
-    private Weight weight;
+    //private Weight weight;
     private String id;
     private String name;
     private String cfaUrl;
@@ -17,6 +18,7 @@ public class Breed {
     private String countryCode;
     private String description;
     private String lifeSpan;
+    @PrimaryKey(autoGenerate = true)
     private Integer indoor;
     private Integer lap;
     private Integer adaptability;
@@ -44,13 +46,13 @@ public class Breed {
     private Integer hypoallergenic;
     private String referenceImageId;
 
-    public Weight getWeight() {
+    /*public Weight getWeight() {
         return weight;
     }
 
     public void setWeight(Weight weight) {
         this.weight = weight;
-    }
+    }*/
 
     public String getId() {
         return id;
