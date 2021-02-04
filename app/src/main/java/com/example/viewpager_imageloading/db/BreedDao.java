@@ -9,7 +9,9 @@ import androidx.room.Query;
 import com.example.viewpager_imageloading.data.model.model.Breed;
 
 import java.util.List;
-
+/**
+ * Created by Anil Kumar on 02,Feb,2021
+ */
 @Dao
 public interface BreedDao {
     @Insert

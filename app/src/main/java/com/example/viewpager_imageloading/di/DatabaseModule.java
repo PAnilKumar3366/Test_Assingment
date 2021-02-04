@@ -14,6 +14,9 @@ import dagger.Provides;
 import dagger.hilt.InstallIn;
 import dagger.hilt.android.components.ApplicationComponent;
 
+/**
+ * Created by Anil Kumar on 02,Feb,2021
+ */
 @Module
 @InstallIn(ApplicationComponent.class)
 public class DatabaseModule {
@@ -28,7 +31,7 @@ public class DatabaseModule {
 
     @Provides
     @Singleton
-    public static BreedDao providePokeDao(BreedDB breedDB){
+    public static BreedDao provideCatsDao(BreedDB breedDB){
         return breedDB.breedDao();
     }
 

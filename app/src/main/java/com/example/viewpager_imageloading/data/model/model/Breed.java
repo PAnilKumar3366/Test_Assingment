@@ -3,6 +3,9 @@ package com.example.viewpager_imageloading.data.model.model;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
+/**
+ * Created by Anil Kumar on 01,Feb,2021
+ */
 @Entity(tableName = "breed_table")
 
 public class Breed {

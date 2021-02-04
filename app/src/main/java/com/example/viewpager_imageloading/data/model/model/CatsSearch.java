@@ -1,11 +1,10 @@
 package com.example.viewpager_imageloading.data.model.model;
 
-import com.example.viewpager_imageloading.data.model.Repository;
-import com.example.viewpager_imageloading.data.model.ResponseObject;
-
-import java.lang.reflect.Type;
 import java.util.List;
 
+/**
+ * Created by Anil Kumar on 02,Feb,2021
+ */
 public class CatsSearch {
     private List<ResponseObject> repositoryList;
 
