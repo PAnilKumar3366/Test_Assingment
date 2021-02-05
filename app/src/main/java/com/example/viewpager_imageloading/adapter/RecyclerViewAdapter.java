@@ -9,6 +9,8 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.example.viewpager_imageloading.R;
 import com.example.viewpager_imageloading.data.model.model.ResponseObject;
 import com.example.viewpager_imageloading.databinding.ListItemBinding;
 
@@ -43,7 +45,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public void onBindViewHolder(@NonNull CatsViewHolder holder, int position) {
         ResponseObject cat=catsList.get(position);
         holder.itemBinding.catName.setText(cat.getId());
-        Glide.with(context).load(cat.getUrl()).into(holder.itemBinding.catImage);
+        Glide.with(context).load(cat.getUrl()).
+                diskCacheStrategy(DiskCacheStrategy.DATA).
+                placeholder(R.drawable.placeholder).
+                into(holder.itemBinding.catImage);
     }
 
     @Override

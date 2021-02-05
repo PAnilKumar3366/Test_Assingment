@@ -10,6 +10,7 @@ import androidx.annotation.NonNull;
 import androidx.viewpager.widget.PagerAdapter;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.example.viewpager_imageloading.R;
 import com.example.viewpager_imageloading.data.model.model.ResponseObject;
 
@@ -60,7 +61,10 @@ public class ViewPagerAdapter extends PagerAdapter {
         // referencing the image view from the item.xml file
         ImageView imageView = (ImageView) itemView.findViewById(R.id.imageViewMain);
         if(CatsList.get(position).getUrl()!=null && !CatsList.get(position).getUrl().isEmpty())
-        Glide.with(context).load(CatsList.get(position).getUrl()).into(imageView);
+        Glide.with(context).load(CatsList.get(position).getUrl()).
+                diskCacheStrategy(DiskCacheStrategy.DATA).
+                placeholder(R.drawable.placeholder).
+                into(imageView);
         // setting the image in the imageView
 
         // Adding the View
