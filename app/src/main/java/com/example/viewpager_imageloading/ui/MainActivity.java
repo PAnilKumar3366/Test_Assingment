@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBinding mBinding;
 
     private static final String TAG = "MainActivity";
-
+/*Changes for the new branch*/
     BreedsViewModel viewModel;
     boolean isListSelected=false;
     boolean isGridSelected=false;
